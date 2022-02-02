@@ -50,7 +50,6 @@ public class ParallelExecutionBasics {
         System.out.println("test case 3 using Thread : " + id);
     }
 
-
     @Test
     public void test4() throws InterruptedException {
         //   System.out.println("test case 3 running");
