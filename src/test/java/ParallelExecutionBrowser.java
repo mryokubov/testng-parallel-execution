@@ -17,16 +17,12 @@ import java.time.Instant;
 public class ParallelExecutionBrowser {
 
     static final String searchItem = "java for beginners";
-    WebDriver driver;
 
-    @BeforeMethod
-    public void setUP(){
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-    }
 
     @Test
     public void googleTest(){
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));
         driver.get("https://google.com");
         driver.findElement(By.name("q")).sendKeys(searchItem + Keys.ENTER);
@@ -35,7 +31,8 @@ public class ParallelExecutionBrowser {
 
     @Test
     public void amazonTest(){
-
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));
         driver.get("https://amazon.com");
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys(searchItem + Keys.ENTER);
@@ -43,7 +40,8 @@ public class ParallelExecutionBrowser {
 
     @Test
     public void yahooTest(){
-
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));
         driver.get("https://yahoo.com");
         driver.findElement(By.id("ybar-sbq")).sendKeys(searchItem + Keys.ENTER);
