@@ -4,7 +4,8 @@
     <test name="Simple Test" >
         <classes>
 <!--            <class name="ParallelExecutionBasics"></class>-->
-            <class name="ParallelExecutionBrowser"></class>
+<!--            <class name="ParallelExecutionBrowser"></class>-->
+            <class name="ParallExecutionWithDataProvider"></class>
         </classes>
     </test>
 </suite>
